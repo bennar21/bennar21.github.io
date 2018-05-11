@@ -1,0 +1,19 @@
+<h1>Bookshelf</h1>
+
+<p>This is a bookshelf displaying some of the books I've found inspiring. The ratings are currently from <a target="_blank" href="https://www.goodreads.com">goodreads.com</a> but I will later give them my own rating.</p>
+
+
+<div class="row">
+  <div *ngFor="let book of bookShelf" class="col-sm-6 col-md-4 thumb">
+    <div  class="thumbnail">
+      <img src="{{book.pictureName}}">
+      <div  class="caption">
+          <ul class="list-inline">
+            <li class="list-inline-item"><h4>{{book.title}} <small>by {{book.author}}</small> </h4> </li>
+            <li class="list-inline-item"><h4><small>Rating: {{book.rating}} / 5</small></h4></li>
+          </ul>
+        <p>Decription</p>
+      </div>
+    </div>
+  </div>
+</div>
